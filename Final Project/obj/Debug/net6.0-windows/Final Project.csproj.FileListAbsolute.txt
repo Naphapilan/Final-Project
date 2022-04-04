@@ -1,0 +1,18 @@
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.csproj.AssemblyReference.cache
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final_Project.Form1.resources
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final_Project.Form2.resources
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.csproj.GenerateResource.cache
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.GeneratedMSBuildEditorConfig.editorconfig
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.AssemblyInfoInputs.cache
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.AssemblyInfo.cs
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.csproj.CoreCompileInputs.cache
+E:\Final Project\Final Project\bin\Debug\net6.0-windows\Final Project.exe
+E:\Final Project\Final Project\bin\Debug\net6.0-windows\Final Project.deps.json
+E:\Final Project\Final Project\bin\Debug\net6.0-windows\Final Project.runtimeconfig.json
+E:\Final Project\Final Project\bin\Debug\net6.0-windows\Final Project.dll
+E:\Final Project\Final Project\bin\Debug\net6.0-windows\Final Project.pdb
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.dll
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\refint\Final Project.dll
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.pdb
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\Final Project.genruntimeconfig.cache
+E:\Final Project\Final Project\obj\Debug\net6.0-windows\ref\Final Project.dll

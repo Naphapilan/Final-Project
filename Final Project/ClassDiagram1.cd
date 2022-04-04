@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Final_Project.Form1" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAAABAAAACAAAASBAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Final_Project.Form2" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BSAAgIAAACAAABAyACiAggBKKYg6JgAAAgACCAAIEEE=</HashCode>
+      <FileName>Form2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Final_Project.SumExpenses" Collapsed="true">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgABAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SumExpenses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Final_Project.SumIncome" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>SumIncome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
