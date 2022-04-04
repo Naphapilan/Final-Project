@@ -18,7 +18,7 @@ classDiagram
   class form2{
   bontonAdd()
   oponFile()
-  saveFile
+  saveFile()
   }
   class SumIncome{
   addSumIn()
