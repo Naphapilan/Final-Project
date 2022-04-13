@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    internal class SumIncome 
+    internal class SumIncome : DataIncome
     {
+        public string date;
+        public string list;
+        public int amountIn;
         private double sum = 0;
         //private double income = 0;
         /// <summary>
@@ -19,9 +22,11 @@ namespace Final_Project
             this.sum += income;
 
         }
-        public double getSumIn()
+        public double getSumIn() { return sum; }      
+        public void deleteSumIn(double income)
         {
-            return sum;
+            this.sum -= income;
         }
+        public double getDeleteSumIn() { return sum; }
     }
 }

@@ -8,6 +8,9 @@ namespace Final_Project
 {
     internal class SumExpenses 
     {
+        public string date;
+        public string list;
+        public int amountEx;
         private double sum = 0;
 
         /// <summary>
@@ -19,10 +22,13 @@ namespace Final_Project
             this.sum += expenses;
 
         }
-        public double getSumEx()
+        public double getSumEx() { return sum; }
+        public void deleteSumEx(double expenses)
         {
-            return sum;
+            this.sum -= expenses;   
         }
+        public double getDeleteSumEx() { return sum; }
+
     }
 }
 

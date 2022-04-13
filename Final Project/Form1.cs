@@ -9,9 +9,14 @@ namespace Final_Project
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+           
                 if (tbUsename.Text == "Naphapilan" && tbPassword.Text == "Nn.21042546")
+                {
+                    Form2 form2 = new Form2();
                     form2.Show();
+                    this.Hide();
+                }
+                    
                 else
                     MessageBox.Show("Usename หรือ Password ไม่ถูกต้อง");
           
