@@ -22,13 +22,14 @@ namespace Final_Project
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             string amountEx = this.textBoxAmountEx.Text;
+            string list = this.textBoxList.Text;
             int n = dataGridView1.Rows.Add();
             dataGridView1.Rows[n].Cells[0].Value = dateTimePicker1.Text;
             dataGridView1.Rows[n].Cells[1].Value = textBoxList.Text;
             dataGridView1.Rows[n].Cells[2].Value = textBoxAmountEx.Text;
 
             double dEx = Convert.ToDouble(amountEx);
-            sumExpenses.addSumEx(dEx);
+            sumExpenses.addSumEx(dEx, list);
 
             double sumEx = sumExpenses.getSumEx();
             tbTotal.Text = sumEx.ToString();

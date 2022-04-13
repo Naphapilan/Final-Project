@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    internal class DataIncome
+    internal class IncomeAndExpenses
     {
-        public string date { get; set; }
-        public string list { get; set; }
-        public string amount { get; set; }
+        private string date;
+        private string list;
+        private int amount;
     }
 }

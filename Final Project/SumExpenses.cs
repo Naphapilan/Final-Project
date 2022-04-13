@@ -8,18 +8,32 @@ namespace Final_Project
 {
     internal class SumExpenses 
     {
-        public string date;
-        public string list;
-        public int amountEx;
+        private string date;
+        private string list = string.Empty;
+        private int amountEx;
+        private double max = 0;
+        private double min = 0;
         private double sum = 0;
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="expenses"></param>
-        public void addSumEx(double expenses)
+        /// <param name="list"></param>
+        public void addSumEx(double expenses,string list)
         {
             this.sum += expenses;
+
+            if(this.min < expenses)
+            {
+                this.min = expenses;
+                this.list = list;
+            }
+            if(this.max < expenses)
+            {
+                this.max = expenses;
+                this.list = list;
+            }
 
         }
         public double getSumEx() { return sum; }
@@ -29,6 +43,10 @@ namespace Final_Project
         }
         public double getDeleteSumEx() { return sum; }
 
+        public double getMax() { return max; }
+        public double getMin() { return min; }
+        public string getListMin() { return list; }
+        public string getListMax() { return list; }
     }
 }
 

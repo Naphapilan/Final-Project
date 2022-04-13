@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,11 +48,18 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbListMin = new System.Windows.Forms.Label();
+            this.lbListMax = new System.Windows.Forms.Label();
+            this.lbInMax = new System.Windows.Forms.Label();
+            this.lbInMin = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -72,6 +82,30 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "วัน/เดือน/ปี";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "รายการ";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "จำนวนเงิน";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
             // 
             // dateTimePicker1
             // 
@@ -164,7 +198,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(767, 366);
+            this.label4.Location = new System.Drawing.Point(27, 44);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 42);
@@ -175,7 +209,7 @@
             // 
             this.tbTotal.Enabled = false;
             this.tbTotal.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbTotal.Location = new System.Drawing.Point(716, 413);
+            this.tbTotal.Location = new System.Drawing.Point(94, 38);
             this.tbTotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(134, 48);
@@ -215,7 +249,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(960, 52);
+            this.menuStrip1.Size = new System.Drawing.Size(1197, 52);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -243,39 +277,105 @@
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
-            // Column1
+            // label5
             // 
-            this.Column1.HeaderText = "วัน/เดือน/ปี";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 200;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(185, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 42);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "รายการ";
             // 
-            // Column2
+            // label6
             // 
-            this.Column2.HeaderText = "รายการ";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(311, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 42);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "จำนวนเงิน";
             // 
-            // Column3
+            // lbListMin
             // 
-            this.Column3.HeaderText = "จำนวนเงิน";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
+            this.lbListMin.AutoSize = true;
+            this.lbListMin.Location = new System.Drawing.Point(234, 141);
+            this.lbListMin.Name = "lbListMin";
+            this.lbListMin.Size = new System.Drawing.Size(31, 42);
+            this.lbListMin.TabIndex = 15;
+            this.lbListMin.Text = "ข";
+            // 
+            // lbListMax
+            // 
+            this.lbListMax.AutoSize = true;
+            this.lbListMax.Location = new System.Drawing.Point(234, 183);
+            this.lbListMax.Name = "lbListMax";
+            this.lbListMax.Size = new System.Drawing.Size(31, 42);
+            this.lbListMax.TabIndex = 16;
+            this.lbListMax.Text = "ข";
+            // 
+            // lbInMax
+            // 
+            this.lbInMax.AutoSize = true;
+            this.lbInMax.Location = new System.Drawing.Point(367, 183);
+            this.lbInMax.Name = "lbInMax";
+            this.lbInMax.Size = new System.Drawing.Size(31, 42);
+            this.lbInMax.TabIndex = 17;
+            this.lbInMax.Text = "0";
+            // 
+            // lbInMin
+            // 
+            this.lbInMin.AutoSize = true;
+            this.lbInMin.Location = new System.Drawing.Point(367, 141);
+            this.lbInMin.Name = "lbInMin";
+            this.lbInMin.Size = new System.Drawing.Size(31, 42);
+            this.lbInMin.TabIndex = 18;
+            this.lbInMin.Text = "0";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lbInMin);
+            this.groupBox1.Controls.Add(this.tbTotal);
+            this.groupBox1.Controls.Add(this.lbInMax);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lbListMax);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.lbListMin);
+            this.groupBox1.Location = new System.Drawing.Point(689, 347);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(436, 233);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "สรุป";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 141);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 42);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "รายรับต่ำสุด";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 183);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(142, 42);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "รายรับสูงสุด";
             // 
             // Income
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 575);
+            this.ClientSize = new System.Drawing.Size(1197, 634);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.tbTotal);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.textBoxAmountIn);
@@ -294,6 +394,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +423,14 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private Label label5;
+        private Label label6;
+        private Label lbListMin;
+        private Label lbListMax;
+        private Label lbInMax;
+        private Label lbInMin;
+        private GroupBox groupBox1;
+        private Label label12;
+        private Label label11;
     }
 }

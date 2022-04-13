@@ -22,17 +22,27 @@ namespace Final_Project
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             string amountIn = this.textBoxAmountIn.Text;
+            string list = this.textBoxList.Text;
             int n = dataGridView1.Rows.Add();
             dataGridView1.Rows[n].Cells[0].Value = dateTimePicker1.Text;
             dataGridView1.Rows[n].Cells[1].Value = textBoxList.Text;
             dataGridView1.Rows[n].Cells[2].Value = textBoxAmountIn.Text;
 
             double dIn = Convert.ToDouble(amountIn);
-            sumIncome.addSumIn(dIn);
+            sumIncome.addSumIn(dIn,list);
 
             double sumIn = sumIncome.getSumIn();
             tbTotal.Text = sumIn.ToString();
 
+
+            double min = sumIncome.getMin();
+            lbInMin.Text = min.ToString();          
+            lbListMin.Text = sumIncome.getListMin().ToString();
+
+            double max = sumIncome.getMax();
+            lbInMax.Text = max.ToString();
+            lbListMax.Text = sumIncome.getListMax().ToString();
+                      
             textBoxList.Text = "";
             textBoxAmountIn.Text = "0";
         }
@@ -62,7 +72,7 @@ namespace Final_Project
                             {
                                 for (int j = 0; j < columnCount; j++)
                                 {
-                                    outputCSV[i] += dataGridView1.Rows[i - 1].Cells[j].Value.ToString() + ",";
+                                    outputCSV[i] += dataGridView1.Rows[i - 1].Cells[j].Value.ToString() + "," ;
                                 }
                             }
                             File.WriteAllLines(sfd.FileName, outputCSV, Encoding.UTF8);
@@ -94,17 +104,26 @@ namespace Final_Project
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
-        {
+        {//แสดงสูงต่ำเมื่อกดลบ
             selectedRow = dataGridView1.CurrentCell.RowIndex;
             dataGridView1.Rows.RemoveAt(selectedRow);
 
             string amountIn = this.textBoxAmountIn.Text;
+            string list = this.textBoxList.Text;
 
             double dDeleteSumIn = Convert.ToDouble(amountIn);
-            sumIncome.deleteSumIn(dDeleteSumIn);
+            sumIncome.deleteSumIn(dDeleteSumIn,list);
 
             double deleteSumIn = sumIncome.getDeleteSumIn();
             tbTotal.Text = deleteSumIn.ToString();
+
+            double min = sumIncome.getMin();
+            lbInMin.Text = min.ToString();
+            lbListMin.Text = sumIncome.getListMin().ToString();
+
+            double max = sumIncome.getMax();
+            lbInMax.Text = max.ToString();
+            lbListMax.Text = sumIncome.getListMax().ToString();
 
             textBoxList.Text = "";
             textBoxAmountIn.Text = "0";
