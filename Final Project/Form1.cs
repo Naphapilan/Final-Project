@@ -15,11 +15,16 @@ namespace Final_Project
                     Form2 form2 = new Form2();
                     form2.Show();
                     this.Hide();
-                }
-                    
+                }                    
                 else
                     MessageBox.Show("Usename หรือ Password ไม่ถูกต้อง");
           
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ขอบคูณที่ใช้บริการ");
+            this.Close();
         }
     }
 }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    internal class SumExpenses 
+    internal class SumExpenses : SumIncome
     {
         private string date;
-        private string list = string.Empty;
+        private string listmin = string.Empty;
+        private string listmax = string.Empty;
         private int amountEx;
         private double max = 0;
-        private double min = 0;
+        private double min = 10000;
         private double sum = 0;
-
         /// <summary>
         /// 
         /// </summary>
@@ -24,29 +24,26 @@ namespace Final_Project
         {
             this.sum += expenses;
 
-            if(this.min < expenses)
+            if(this.min >= expenses)
             {
                 this.min = expenses;
-                this.list = list;
+                this.listmin = list;
             }
-            if(this.max < expenses)
+            if(this.max <= expenses)
             {
                 this.max = expenses;
-                this.list = list;
+                this.listmax = list;
             }
-
         }
         public double getSumEx() { return sum; }
-        public void deleteSumEx(double expenses)
+        public void deleteSumEx(double expenses,string list)
         {
             this.sum -= expenses;   
         }
         public double getDeleteSumEx() { return sum; }
-
-        public double getMax() { return max; }
         public double getMin() { return min; }
-        public string getListMin() { return list; }
-        public string getListMax() { return list; }
+        public double getMax() { return max; }
+        public string getListMin() { return listmin; }
+        public string getListMax() { return listmax; }
     }
 }
-

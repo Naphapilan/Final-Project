@@ -23,18 +23,17 @@ namespace Final_Project
         public void addSumIn(double income,string list)
         {
             this.sum += income;
-            if (this.min > income)
+            if (this.min >= income)
             {
                 this.min = income;
                 this.listmin = list;
             }
-            if (this.max < income)
+            if (this.max <= income)
             {
                 this.max = income;
                 this.listmax = list;
             }
         }
-
         public double getSumIn() { return sum; }    
         /// <summary>
         /// 
@@ -44,16 +43,7 @@ namespace Final_Project
         public void deleteSumIn(double income,string list)
         {
             this.sum -= income;
-            if (this.min > income)
-            {
-                this.min = income;
-                this.listmin = list;
-            }
-            if (this.max < income)
-            {
-                this.max = income;
-                this.listmax = list;
-            }
+            
         }
         public double getDeleteSumIn() { return sum; }
         public double getMin() { return min; }

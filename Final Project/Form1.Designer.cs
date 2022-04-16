@@ -33,11 +33,12 @@
             this.tbUsename = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(225, 196);
+            this.buttonLogin.Location = new System.Drawing.Point(118, 202);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(134, 57);
@@ -83,11 +84,23 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
+            // buttonLogout
+            // 
+            this.buttonLogout.Location = new System.Drawing.Point(281, 202);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(134, 57);
+            this.buttonLogout.TabIndex = 4;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 285);
+            this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsename);
@@ -109,5 +122,6 @@
         private TextBox tbUsename;
         private Label label2;
         private Label label1;
+        private Button buttonLogout;
     }
 }

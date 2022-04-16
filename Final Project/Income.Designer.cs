@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,9 +40,7 @@
             this.textBoxList = new System.Windows.Forms.TextBox();
             this.textBoxAmountIn = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbTotal = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -55,8 +54,12 @@
             this.lbInMax = new System.Windows.Forms.Label();
             this.lbInMin = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,19 +69,20 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 351);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(663, 111);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(669, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(498, 302);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -173,7 +177,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonAdd.Location = new System.Drawing.Point(716, 72);
+            this.buttonAdd.Location = new System.Drawing.Point(24, 328);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(134, 66);
@@ -181,18 +185,6 @@
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSave.Location = new System.Drawing.Point(716, 215);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(134, 57);
-            this.buttonSave.TabIndex = 5;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // label4
             // 
@@ -205,24 +197,13 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "รวม";
             // 
-            // tbTotal
-            // 
-            this.tbTotal.Enabled = false;
-            this.tbTotal.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbTotal.Location = new System.Drawing.Point(94, 38);
-            this.tbTotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbTotal.Name = "tbTotal";
-            this.tbTotal.Size = new System.Drawing.Size(134, 48);
-            this.tbTotal.TabIndex = 11;
-            this.tbTotal.TabStop = false;
-            // 
             // buttonExit
             // 
             this.buttonExit.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonExit.Location = new System.Drawing.Point(716, 282);
+            this.buttonExit.Location = new System.Drawing.Point(506, 328);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(134, 57);
+            this.buttonExit.Size = new System.Drawing.Size(134, 66);
             this.buttonExit.TabIndex = 6;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -231,10 +212,10 @@
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDelete.Location = new System.Drawing.Point(716, 148);
+            this.buttonDelete.Location = new System.Drawing.Point(182, 328);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(134, 57);
+            this.buttonDelete.Size = new System.Drawing.Size(138, 66);
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -280,7 +261,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(185, 89);
+            this.label5.Location = new System.Drawing.Point(275, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 42);
             this.label5.TabIndex = 13;
@@ -289,7 +270,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(311, 89);
+            this.label6.Location = new System.Drawing.Point(512, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 42);
             this.label6.TabIndex = 14;
@@ -298,66 +279,68 @@
             // lbListMin
             // 
             this.lbListMin.AutoSize = true;
-            this.lbListMin.Location = new System.Drawing.Point(234, 141);
+            this.lbListMin.Location = new System.Drawing.Point(304, 141);
             this.lbListMin.Name = "lbListMin";
-            this.lbListMin.Size = new System.Drawing.Size(31, 42);
+            this.lbListMin.Size = new System.Drawing.Size(0, 42);
             this.lbListMin.TabIndex = 15;
-            this.lbListMin.Text = "ข";
+            this.lbListMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbListMax
             // 
             this.lbListMax.AutoSize = true;
-            this.lbListMax.Location = new System.Drawing.Point(234, 183);
+            this.lbListMax.Location = new System.Drawing.Point(304, 183);
             this.lbListMax.Name = "lbListMax";
-            this.lbListMax.Size = new System.Drawing.Size(31, 42);
+            this.lbListMax.Size = new System.Drawing.Size(0, 42);
             this.lbListMax.TabIndex = 16;
-            this.lbListMax.Text = "ข";
+            this.lbListMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbInMax
             // 
             this.lbInMax.AutoSize = true;
-            this.lbInMax.Location = new System.Drawing.Point(367, 183);
+            this.lbInMax.Location = new System.Drawing.Point(550, 183);
             this.lbInMax.Name = "lbInMax";
             this.lbInMax.Size = new System.Drawing.Size(31, 42);
             this.lbInMax.TabIndex = 17;
             this.lbInMax.Text = "0";
+            this.lbInMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbInMin
             // 
             this.lbInMin.AutoSize = true;
-            this.lbInMin.Location = new System.Drawing.Point(367, 141);
+            this.lbInMin.Location = new System.Drawing.Point(550, 141);
             this.lbInMin.Name = "lbInMin";
             this.lbInMin.Size = new System.Drawing.Size(31, 42);
             this.lbInMin.TabIndex = 18;
             this.lbInMin.Text = "0";
+            this.lbInMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbTotal);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lbInMin);
-            this.groupBox1.Controls.Add(this.tbTotal);
             this.groupBox1.Controls.Add(this.lbInMax);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lbListMax);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lbListMin);
-            this.groupBox1.Location = new System.Drawing.Point(689, 347);
+            this.groupBox1.Location = new System.Drawing.Point(12, 421);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 233);
+            this.groupBox1.Size = new System.Drawing.Size(700, 231);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "สรุป";
             // 
-            // label11
+            // lbTotal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 141);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 42);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "รายรับต่ำสุด";
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.Location = new System.Drawing.Point(140, 44);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(31, 42);
+            this.lbTotal.TabIndex = 21;
+            this.lbTotal.Text = "0";
             // 
             // label12
             // 
@@ -368,15 +351,48 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "รายรับสูงสุด";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 141);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 42);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "รายรับต่ำสุด";
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.Location = new System.Drawing.Point(347, 328);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(136, 66);
+            this.buttonReset.TabIndex = 5;
+            this.buttonReset.Text = "Reset";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1008, 52);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 42);
+            this.label7.TabIndex = 21;
+            // 
             // Income
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 634);
+            this.ClientSize = new System.Drawing.Size(1197, 667);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.textBoxAmountIn);
             this.Controls.Add(this.textBoxList);
@@ -391,6 +407,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Income";
             this.Text = "Income";
+            this.Load += new System.EventHandler(this.Income_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -411,9 +428,7 @@
         private TextBox textBoxList;
         private TextBox textBoxAmountIn;
         private Button buttonAdd;
-        private Button buttonSave;
         private Label label4;
-        private TextBox tbTotal;
         private Button buttonExit;
         private Button buttonDelete;
         private MenuStrip menuStrip1;
@@ -432,5 +447,9 @@
         private GroupBox groupBox1;
         private Label label12;
         private Label label11;
+        private Label lbTotal;
+        private Button buttonReset;
+        private System.Windows.Forms.Timer timer1;
+        private Label label7;
     }
 }
