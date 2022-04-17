@@ -20,9 +20,24 @@ classDiagram
   oponFile()
   saveFile()
   }
+  class Income{
+  }
   class SumIncome{
-  addSumIn()
-  getSumIn()
+  -string date
+  -string listmin
+  -string listmax
+  -int amountin
+  -double min
+  -double max
+  -double sum
+  +addSumIn()void
+  +getSumIn()double
+  +deleteSumIn()
+  +getDeleteSumIn()
+  +getMin()
+  +getMax()
+  +getListMin()
+  +getListMax()
   }
   class SumExpenses{
   addSumEx()
