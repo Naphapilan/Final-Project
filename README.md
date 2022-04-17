@@ -57,8 +57,7 @@ classDiagram
   +getListMax()string
   }
   form2 --|> form1
-  SumIncome --|> form2
-  SumExpenses --|> form2
+  SumExpenses --|> SumIncome 
 ```
 ผู้พัฒนาโปรแกรม
 ```
