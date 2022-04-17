@@ -43,7 +43,7 @@ classDiagram
   -date:string
   -listmin:string
   -listmax:string
-  -amountin:int
+  -amountex:int
   -min:double
   -max:double
   -sum:double
