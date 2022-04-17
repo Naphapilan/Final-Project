@@ -23,21 +23,21 @@ classDiagram
   class Income{
   }
   class SumIncome{
-  -string date
-  -string listmin
-  -string listmax
-  -int amountin
-  -double min
-  -double max
-  -double sum
-  +addSumIn()void
+  -date string
+  -listmin string
+  -listmax string
+  -int amountin int
+  -min double
+  -max double
+  -sum double
+  +addSumIn(income double,list string)void
   +getSumIn()double
-  +deleteSumIn()
-  +getDeleteSumIn()
-  +getMin()
-  +getMax()
-  +getListMin()
-  +getListMax()
+  +deleteSumIn(income double,list string)void
+  +getDeleteSumIn()double
+  +getMin()double
+  +getMax()double
+  +getListMin()string
+  +getListMax()string
   }
   class SumExpenses{
   addSumEx()
