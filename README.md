@@ -40,8 +40,21 @@ classDiagram
   +getListMax()string
   }
   class SumExpenses{
-  addSumEx()
-  getSumEx()
+  -date:string
+  -listmin:string
+  -listmax:string
+  -amountin:int
+  -min:double
+  -max:double
+  -sum:double
+  +addSumEx(expenses double,list string)void
+  +getSumEx()double
+  +deleteSumEx(expenses double,list string)void
+  +getDeleteSumEx()double
+  +getMin()double
+  +getMax()double
+  +getListMin()string
+  +getListMax()string
   }
   form2 --|> form1
   SumIncome --|> form2
