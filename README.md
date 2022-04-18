@@ -13,51 +13,65 @@ Class Diagram
 classDiagram
   direction LR
   class form1{
-  bottonLoging()
+  -Loging()
+  -Logout()
   }
   class form2{
-  bontonAdd()
-  oponFile()
-  saveFile()
+  -Ok()void
+  -Exit()void
   }
   class Income{
+  selectedRow:int 
+  -Add():void
+  -Delete():void
+  -Reset():void
+  -Exit():void
+  -Save():void
   }
-  class SumIncome{
+  class Expenses{
+   selectedRow:int 
+  -Add():void
+  -Delete():void
+  -Reset():void
+  -Exit():void
+  -Save():void
+  }
+  class IncomeAndExpenses{
   -date:string
   -listmin:string
   -listmax:string
-  -amountin:int
   -min:double
   -max:double
   -sum:double
+  +getMin()double
+  +getMax()double
+  +getListMin()string
+  +getListMax()string
+  +reSum()double
+  +reMin()double
+  +reMax()double
+  +reListMin()string
+  +reListMax()string
+  }
+  class SumIncome{
+  -amountIn:int
   +addSumIn(income double,list string)void
   +getSumIn()double
   +deleteSumIn(income double,list string)void
   +getDeleteSumIn()double
-  +getMin()double
-  +getMax()double
-  +getListMin()string
-  +getListMax()string
   }
   class SumExpenses{
-  -date:string
-  -listmin:string
-  -listmax:string
-  -amountex:int
-  -min:double
-  -max:double
-  -sum:double
+  -amountEx:int
   +addSumEx(expenses double,list string)void
   +getSumEx()double
   +deleteSumEx(expenses double,list string)void
   +getDeleteSumEx()double
-  +getMin()double
-  +getMax()double
-  +getListMin()string
-  +getListMax()string
   }
   form2 --|> form1
-  SumExpenses --|> SumIncome 
+  SumExpenses --|> IncomeAndExpenses
+  SumIncome --|> IncomeAndExpenses 
+  SumExpenses -- Expenses
+  SumIncome -- Income
 ```
 ผู้พัฒนาโปรแกรม
 ```
