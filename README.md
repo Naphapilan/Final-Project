@@ -36,13 +36,18 @@ classDiagram
   -Exit():void
   -Save():void
   }
-  class IncomeAndExpenses{
+  class SumIncome{
   -date:string
   -listmin:string
   -listmax:string
+  -amountIn:int
   -min:double
   -max:double
   -sum:double
+  +addSumIn(income double,list string)void
+  +getSumIn()double
+  +deleteSumIn(income double,list string)void
+  +getDeleteSumIn()double
   +getMin()double
   +getMax()double
   +getListMin()string
@@ -53,23 +58,29 @@ classDiagram
   +reListMin()string
   +reListMax()string
   }
-  class SumIncome{
-  -amountIn:int
-  +addSumIn(income double,list string)void
-  +getSumIn()double
-  +deleteSumIn(income double,list string)void
-  +getDeleteSumIn()double
-  }
   class SumExpenses{
+  -date:string
+  -listmin:string
+  -listmax:string
   -amountEx:int
+  -min:double
+  -max:double
+  -sum:double
   +addSumEx(expenses double,list string)void
   +getSumEx()double
   +deleteSumEx(expenses double,list string)void
   +getDeleteSumEx()double
+  +getMin()double
+  +getMax()double
+  +getListMin()string
+  +getListMax()string
+  +reSum()double
+  +reMin()double
+  +reMax()double
+  +reListMin()string
+  +reListMax()string
   }
   form2 --|> form1
-  SumExpenses --|> IncomeAndExpenses
-  SumIncome --|> IncomeAndExpenses 
   SumExpenses -- Expenses
   SumIncome -- Income
 ```
