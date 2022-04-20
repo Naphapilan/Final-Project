@@ -16,28 +16,28 @@ Class Diagram
 classDiagram
   direction LR
   class form1{
-  -Loging():void
-  -Logout():void
+  -Loging()void
+  -Logout()void
   }
   class form2{
-  -Ok():void
-  -Exit():void
+  -Ok()void
+  -Exit()void
   }
   class Income{
   selectedRow:int 
-  -Add():void
-  -Delete():void
-  -Reset():void
-  -Exit():void
-  -SaveFile():void
+  -Add()void
+  -Delete()void
+  -Reset()void
+  -Exit()void
+  -SaveFile()void
   }
   class Expenses{
    selectedRow:int 
-  -Add():void
-  -Delete():void
-  -Reset():void
-  -Exit():void
-  -SaveFile():void
+  -Add()void
+  -Delete()void
+  -Reset()void
+  -Exit()void
+  -SaveFile()void
   }
   class SumIncome{
   -date:string
