@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    internal class SumExpenses : SumIncome
+    internal class SumExpenses 
     {
         private string date;
         private string listmin = string.Empty;

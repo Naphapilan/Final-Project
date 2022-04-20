@@ -136,7 +136,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(72, 120);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(203, 48);
+            this.dateTimePicker1.Size = new System.Drawing.Size(244, 48);
             this.dateTimePicker1.TabIndex = 13;
             this.dateTimePicker1.TabStop = false;
             // 
@@ -152,13 +152,13 @@
             this.Column2,
             this.Column3});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(658, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(641, 120);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 257);
+            this.dataGridView1.Size = new System.Drawing.Size(666, 257);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -221,7 +221,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1197, 50);
+            this.menuStrip1.Size = new System.Drawing.Size(1320, 50);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -237,7 +237,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(270, 50);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(174, 50);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -384,7 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1197, 667);
+            this.ClientSize = new System.Drawing.Size(1320, 667);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.groupBox1);

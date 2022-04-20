@@ -81,7 +81,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 283);
+            this.dataGridView1.Size = new System.Drawing.Size(667, 283);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -118,7 +118,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(72, 111);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(203, 48);
+            this.dateTimePicker1.Size = new System.Drawing.Size(256, 48);
             this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.TabStop = false;
             // 
@@ -232,7 +232,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1197, 52);
+            this.menuStrip1.Size = new System.Drawing.Size(1344, 52);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -248,7 +248,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(270, 50);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(174, 50);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -383,7 +383,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1197, 667);
+            this.ClientSize = new System.Drawing.Size(1344, 667);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.groupBox1);
