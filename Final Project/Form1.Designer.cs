@@ -38,13 +38,14 @@
             // 
             // buttonLogin
             // 
+            this.buttonLogin.BackColor = System.Drawing.Color.Lime;
             this.buttonLogin.Location = new System.Drawing.Point(118, 202);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(134, 57);
             this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // tbPassword
@@ -86,19 +87,21 @@
             // 
             // buttonLogout
             // 
+            this.buttonLogout.BackColor = System.Drawing.Color.Red;
             this.buttonLogout.Location = new System.Drawing.Point(281, 202);
             this.buttonLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(134, 57);
             this.buttonLogout.TabIndex = 4;
             this.buttonLogout.Text = "Logout";
-            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.UseVisualStyleBackColor = false;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(542, 285);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonLogin);

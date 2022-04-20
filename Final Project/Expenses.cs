@@ -118,53 +118,6 @@ namespace Final_Project
                 }
             }
         }
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "CSV(.csv)|*.csv";
-            openFile.Title = "Please select file";
-            if (openFile.ShowDialog() == DialogResult.OK)
-            {
-                dataGridView1.DataSource = null;
-
-                DataTable dt = new DataTable();
-                string[] colName = { "", "", "" };
-
-                foreach (string col in colName)
-                {
-                    dt.Columns.Add(col);
-                }
-
-                foreach (string file in openFile.FileNames)
-                {
-                    try
-                    {
-                        if (File.Exists(file) == true)
-                        {
-                            //import file data
-                            StreamReader csv = new StreamReader(file);
-                            string textLine; //string line data
-                            string[] splitLine; // use array to save split data
-
-                            do
-                            {
-                                textLine = csv.ReadLine();
-                                splitLine = textLine.Split(",");
-                                dt.Rows.Add(splitLine);
-                            }
-                            while (csv.Peek() != -1);
-                            csv.Close();
-                            csv.Dispose();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
-                dataGridView1.DataSource = dt;
-            }
-        }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
@@ -182,11 +135,11 @@ namespace Final_Project
                 }
             }
 
-            lbTotal.Text = "";
-            lbListMin.Text = "";
-            lbExMin.Text = "";
-            lbListMax.Text = "";
-            lbExMax.Text = "";
+            lbTotal.Text = sumExpenses.reSum().ToString();
+            lbListMin.Text = sumExpenses.reListMin().ToString();
+            lbExMin.Text = sumExpenses.reMin().ToString();
+            lbListMax.Text = sumExpenses.reListMax().ToString();
+            lbExMax.Text = sumExpenses.reMax().ToString();
         }  
         
         private void Expenses_Load(object sender, EventArgs e)

@@ -45,5 +45,10 @@ namespace Final_Project
         public double getMax() { return max; }
         public string getListMin() { return listmin; }
         public string getListMax() { return listmax; }
+        public double reSum() { return sum = 0; }
+        public double reMin() { return min = 10000; }
+        public double reMax() { return max = 0; }
+        public string reListMin() { return listmin = ""; }
+        public string reListMax() { return listmax = ""; }
     }
 }

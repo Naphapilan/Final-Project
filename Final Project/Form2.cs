@@ -17,8 +17,7 @@ namespace Final_Project
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonOK_Click(object sender, EventArgs e)
         {
             if (rdIncome.Checked)
             {
@@ -31,15 +30,14 @@ namespace Final_Project
                 Expenses expenses = new Expenses();
                 expenses.Show();
                 this.Hide();
-
             }
         }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
         }
+
     }
 }

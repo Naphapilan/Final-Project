@@ -46,7 +46,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbListMin = new System.Windows.Forms.Label();
@@ -82,7 +81,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 302);
+            this.dataGridView1.Size = new System.Drawing.Size(498, 283);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -176,14 +175,15 @@
             // 
             // buttonAdd
             // 
+            this.buttonAdd.BackColor = System.Drawing.Color.Lime;
             this.buttonAdd.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonAdd.Location = new System.Drawing.Point(24, 328);
+            this.buttonAdd.Location = new System.Drawing.Point(48, 328);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(134, 66);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label4
@@ -199,26 +199,28 @@
             // 
             // buttonExit
             // 
+            this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonExit.Location = new System.Drawing.Point(506, 328);
+            this.buttonExit.Location = new System.Drawing.Point(478, 328);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(134, 66);
             this.buttonExit.TabIndex = 6;
             this.buttonExit.Text = "Exit";
-            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonDelete
             // 
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonDelete.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonDelete.Location = new System.Drawing.Point(182, 328);
+            this.buttonDelete.Location = new System.Drawing.Point(190, 328);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(138, 66);
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "Delete";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // menuStrip1
@@ -237,8 +239,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveToolStripMenuItem,
-            this.openToolStripMenuItem});
+            this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("TH Kodchasal", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 46);
@@ -247,16 +248,9 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(179, 50);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(270, 50);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(179, 50);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // label5
             // 
@@ -326,7 +320,7 @@
             this.groupBox1.Controls.Add(this.lbListMax);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lbListMin);
-            this.groupBox1.Location = new System.Drawing.Point(12, 421);
+            this.groupBox1.Location = new System.Drawing.Point(12, 402);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(700, 231);
             this.groupBox1.TabIndex = 19;
@@ -362,12 +356,13 @@
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(347, 328);
+            this.buttonReset.BackColor = System.Drawing.Color.Yellow;
+            this.buttonReset.Location = new System.Drawing.Point(335, 328);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(136, 66);
             this.buttonReset.TabIndex = 5;
             this.buttonReset.Text = "Reset";
-            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // timer1
@@ -387,6 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 42F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1197, 667);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonReset);
@@ -434,7 +430,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem saveToolStripMenuItem;
-        private ToolStripMenuItem openToolStripMenuItem;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
